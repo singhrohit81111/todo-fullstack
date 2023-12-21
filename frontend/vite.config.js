@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [react()],
   server:{
     proxy:{
-      "/api":`https://todo-backend-o5r6.onrender.com`
+      "/api":`https://todo-backend-u5ci.onrender.com`
     }
   }
 })
