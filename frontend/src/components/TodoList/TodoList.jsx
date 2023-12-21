@@ -7,7 +7,6 @@ export default function TodoList() {
     const loadTasks = async () => {
         try {
             const res = await axios.get(`/api/v1/todos`);
-            console.log(res.data);
             setTasks(res.data)
         } catch (error) {
            console.log(error);
@@ -19,13 +18,13 @@ export default function TodoList() {
     },[])
 
     const deletedTask=(taskID)=>{
-        const tasks_After_Deletion=tasks.filter(task=>{return task.id!=taskID});
+        const tasks_After_Deletion=tasks.filter(task=>{return task._id!=taskID});
         setTasks(tasks_After_Deletion);
     }
 
     const updatedTask=(taskInfo)=>{
         const updated_task__array=tasks.map(task=>{
-            if(task.id==taskInfo.id) return {...task,todo:taskInfo.todo};
+            if(task._id==taskInfo.id) return {...task,todo:taskInfo.todo};
             return task;
         })
         setTasks([...updated_task__array])

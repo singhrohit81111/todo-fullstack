@@ -8,10 +8,9 @@ export default function Input() {
     setTask(e.target.value);
   }
   const handleSubmit = (e) => {
-    e.preventDefault();
     axios.post(`/api/v1/todos/post`, {
       todo: e.target[0].value,
-    }).then((res) => { location.reload() })
+    })
     setTask("")
   }
   return (
