@@ -1,0 +1,23 @@
+.inputField {
+    min-height: 55px;
+    /* min-width: 41vw; */
+    border: 3px solid black;
+}
+
+
+input[type="text"] {
+    color: grey;
+    font-size: 50px;
+}
+
+button {
+    font-size: 52px;
+    background-color: black;
+    color: white;
+    margin-left: -3px;
+}
+
+input:focus{
+    border: 3px solid black;
+    outline: none;
+}

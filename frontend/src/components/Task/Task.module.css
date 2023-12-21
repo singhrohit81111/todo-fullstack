@@ -1,0 +1,50 @@
+.task {
+    display: flex;
+    justify-content: space-between;
+    font-size: 30px;
+    background-color: grey;
+    margin-top: 7px;
+    min-height: 52px;
+}
+
+.button {
+    color: #c0bac2;
+    font-size: 15px;
+    box-shadow: 2px 2px;
+}
+
+.taskName {
+    padding-left: 12px;
+}
+
+.taskButtons {
+    min-width: 138px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.updationForm {
+    font-size: 20px;
+    display: flex;
+    justify-content: flex-end;
+    margin: 10px 40px 0px 0px;
+}
+
+
+
+#updationInput{
+    font-size: 20px;
+    border: 3px solid black;
+}
+
+.updationSubmitButton {
+    margin-left: 5px;
+    color: white;
+    background-color: black;
+}
+
+.updationCancelButton {
+    font-size: 14px;
+    margin-left: 5px;
+}
