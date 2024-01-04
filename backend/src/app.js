@@ -1,12 +1,15 @@
 const express=require("express");
 const app=express();
 const cors=require("cors");
-const todo_Route=require("./routes/todo.route")
+const todo_Route=require("./routes/todo.route");
+
+const allowedOrigins = [`https://delicate-starlight-df149a.netlify.app`, 'http://localhost:5173'];
 
 app.use(cors(
     {
-        origin:`https://delicate-starlight-df149a.netlify.app/`,
-        methods: 'GET,HEAD,PUT,PATCH,POST,DELETE'
+        origin:allowedOrigins,
+        methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+        credentials: true
     }
 ));
 app.use(express.json());
