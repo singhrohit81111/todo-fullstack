@@ -1,6 +1,5 @@
-
 [[redirects]]
-  from = "/api/*"
+  from = "/*"
   to = "https://todo-backend-u5ci.onrender.com/:splat"
   status = 200
   force = true
