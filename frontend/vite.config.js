@@ -6,7 +6,12 @@ export default defineConfig({
   plugins: [react()],
   server:{
     proxy:{
-      "/api":`https://todo-backend-u5ci.onrender.com`
+      '/api': {
+        target: 'https://todo-backend-u5ci.onrender.com',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api/, ''),
+        secure:true
+      }
     }
   }
 })
