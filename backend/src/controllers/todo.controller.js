@@ -12,6 +12,7 @@ const createTask = asyncHandler(async (req, res, next) => {
     await todo.create({
         todo: todo_task
     })
+    res.status(200).json("task created successfully")
 })
 
 const updateTask = asyncHandler(async (req, res, next) => {

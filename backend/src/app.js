@@ -9,7 +9,8 @@ app.use(cors(
     {
         origin:allowedOrigins,
         methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-        credentials: true
+        credentials: true,
+        allowedHeaders: 'Content-Type, Authorization',
     }
 ));
 app.use(express.json());
