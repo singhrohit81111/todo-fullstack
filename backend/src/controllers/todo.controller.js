@@ -8,7 +8,7 @@ const todoList = asyncHandler(async (req, res, next) => {
 })
 
 const createTask = asyncHandler(async (req, res, next) => {
-    const todo_task = await req.body.todo;
+    const todo_task =  req.body.todo;
     await todo.create({
         todo: todo_task
     })

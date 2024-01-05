@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import axios from 'axios';
+import { axios } from '../../Axios';
 import style from './Task.module.css';
 
 export default function Task({ task, deletedTask, updatedTask }) {
@@ -35,8 +35,8 @@ export default function Task({ task, deletedTask, updatedTask }) {
             </div>
             {isUpdated &&
                 <form onSubmit={handleSubmit} className={style.updationForm}>
-                    <input type='text' value={valueToBeChanged} onChange={handleChange} id={style.updationInput}/>
-                    <input type='submit' value="Submit"  className={style.updationSubmitButton}/>
+                    <input type='text' value={valueToBeChanged} onChange={handleChange} id={style.updationInput} />
+                    <input type='submit' value="Submit" className={style.updationSubmitButton} />
                     <button className={style.updationCancelButton} onClick={() => { setIsUpdated(false) }}>cancel</button>
                 </form>
             }
